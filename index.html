@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>電気料金シミュレーション</title>
+  </head>
+  <body>
+    <header>
+      <ul class="denki_list">
+        <li>現電力会社</li>
+        <li>切り替え先</li>
+      </ul>
+      <div class="header_title">現電力会社</div>
+    </header>
+    <main>
+      <section>
+        <div class="area">
+          <h2>使用エリア</h2>
+          <form action="#" method="POST">
+            <select name="area_list1" id="area_list1" onchange="createMenu(this.value),createMenu2(this.value),createMenu3(this.value)">
+              <option disabled selected>エリアを選択してください</option>
+              <option value="関東エリア">関東エリア</option>
+              <option value="中部エリア">中部エリア</option>
+              <option value="東北エリア">東北エリア</option>
+              <option value="九州エリア">九州エリア</option>
+            </select>
+          </form>
+            <p id="area_list2">エリアを選択してください</p>
+        </div>
+      </section>
+      <section>
+        <div class="company">
+          <h2>電力会社名</h2>
+          <select name="company_list1" id="company_list1" disabled>
+            <option disabled selected>エリアを選択してください</option>
+          </select>
+          <select name="company_list2" id="company_list2" disabled>
+            <option disabled selected>エリアを選択してください</option>
+          </select>
+        </div>
+      </section>
+      <section>
+        <div class="service">
+          <h2>サービス名</h2>
+          <p id="service_list1"></p>
+          <p id="service_list2"></p>
+          </select>
+        </div>
+      </section>
+      <section>
+        <div class="capacity">
+           <h2>契約容量　</h2>
+           <select id="capacity_list1" name="capacity_list1">
+            <option disabled selected>-</option>
+            <option value="20A">20A</option>
+            <option value="30A">30A</option>
+            <option value="40A">40A</option>
+            <option value="50A">50A</option>
+            <option value="60A">60A</option>
+           </select>
+           <select id="capacity_list2" name="capacity_list2">
+            <option disabled selected>-</option>
+            <option value="20A">20A</option>
+            <option value="30A">30A</option>
+            <option value="40A">40A</option>
+            <option value="50A">50A</option>
+            <option value="60A">60A</option>
+           </select>
+           <!-- <p id="capacity_list2">-</p> -->
+        </div>
+      </section>
+      <section>
+        <div class="consumption">
+          <h2>使用電力量</h2>
+          <input type="text" id="consumption_text1" pattern="\d*" placeholder="例) 300" maxlength="3"  oninput="value = value.replace(/[^0-9]+/i,'');" />
+          <input type="text" id="consumption_text2" pattern="\d*" placeholder="例) 300" maxlength="3"  oninput="value = value.replace(/[^0-9]+/i,'');" />
+          <!-- <div id="consumption_text2"></div> -->
+        </div>
+      </section>
+      <section>
+        <div class="price">
+          <div id="price_item">
+            <h2>基本料金</h2>
+            <p id="item_Basic1"></p>
+            <p id="item_Basic2"></p>
+          </div>
+          <div id="price_item">
+            <h2>0~120kwh</h2>
+            <p id="item_first1"></p>
+            <p id="item_first2"></p>
+          </div>
+          <div id="price_item">
+            <h2>120~300kwh</h2>
+            <p id="item_second1"></p>
+            <p id="item_second2"></p>
+          </div>
+          <div id="price_item">
+            <h2>300kwh~</h2>
+            <p id="item_third1"></p>
+            <p id="item_third2"></p>
+          </div>
+          <div id="price_total">
+            <h2>電力料金</h2>
+            <p id="total_item1"></p>
+            <p id="total_item2"></p>
+          </div>
+        </div>
+        </div>
+      </section>
+
+    <div class="main_second"> 
+      <section>
+        <div class="switching_title">切り替え先</div>
+      </section>
+      <section>
+        <div class="area">
+          <h2>使用エリア</h2>
+            <p id="area_list3">エリアを選択してください</p>
+        </div>
+      </section>
+      <section>
+        <div class="company">
+          <h2>電力会社名</h2>
+          <select name="company_list3" id="company_list3" disabled>
+            <option disabled selected>エリアを選択してください</option>
+          </select>
+        </div>
+      </section>
+      <section>
+        <div class="service">
+          <h2>サービス名</h2>
+          <p id="service_list3"></p>
+          </select>
+        </div>
+      </section>
+      <section>
+        <div class="capacity">
+          <h2>契約容量　</h2>
+          <select id="capacity_list3" name="capacity_list2">
+            <option disabled selected>-</option>
+            <option value="20A">20A</option>
+            <option value="30A">30A</option>
+            <option value="40A">40A</option>
+            <option value="50A">50A</option>
+            <option value="60A">60A</option>
+          </select>
+          <!-- <p id="capacity_list2">-</p> -->
+        </div>
+      </section>
+      <section>
+        <div class="consumption">
+          <h2>使用電力量</h2>
+          <input type="text" id="consumption_text3" maxlength="3" pattern="\d*" placeholder="例) 300"  oninput="value = value.replace(/[^0-9]+/i,'');" />
+          <!-- <div id="consumption_text2"></div> -->
+        </div>
+      </section>
+      <section>
+        <div class="price">
+          <div id="price_item">
+            <h2>基本料金</h2>
+            <p id="item_Basic3"></p>
+          </div>
+          <div id="price_item">
+            <h2>0~120kwh</h2>
+            <p id="item_first3"></p>
+          </div>
+          <div id="price_item">
+            <h2>120~300kwh</h2>
+            <p id="item_second3"></p>
+          </div>
+          <div id="price_item">
+            <h2>300kwh~</h2>
+            <p id="item_third3"></p>
+          </div>
+          <div id="price_total">
+            <h2>電力料金</h2>
+            <p id="total_item3"></p>
+          </div>
+        </div>
+        </div>
+      </section>
+    </div>
+      <button type="button" id="execution" onclick="executionButton()">実行</button>
+      <button type="button" id="clear" onclick="clearButton()">クリア</button>
+  </main>
+  <footer>
+    <section>
+      <div class="footer">
+        <p class="footer_text1">1ヶ月あたり</p>
+        <p class="footer_text2">1年あたり</p>
+      </div>
+    </section>
+      <section>
+        <div class="footer_difference">
+          <h2>差額</h2>
+          <div class="footer_border">
+            <p id="border_text1"></p>
+            <p id="border_text2"></p>
+            <p id="border_text3"></p>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

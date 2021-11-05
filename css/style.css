@@ -1,0 +1,394 @@
+
+  body {
+    border: solid #C0C0C0;
+    width: 1150px;
+    margin: 0 auto;
+  }
+  h2 {
+    width: 275px;
+    text-align: center;
+    color :#9fc5e8;
+  }
+
+  /* ヘッダー */
+  .denki_list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background: linear-gradient(90deg, #e6b8af 0%, #e6b8af 50%, #9fc5e8 50%, #9fc5e8 100%);
+  }
+  .denki_list li{
+    font-size: 2rem;
+    color: white;
+  }
+  .header_title,.switching_title {
+    display:none;
+  }
+  /* 使用エリア */
+  .area {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #area_list1 {
+    border: solid #C0C0C0;
+    padding: 0px 25px 0px 16px;
+  }
+  #area_list2,#area_list3 {
+    font-size: 1.2rem;
+    margin-left: 12%;
+    border: solid #C0C0C0;
+    padding: 0px 25px 0px 25px;
+    width: 300px;
+  }
+
+  /* 使用電力量 */
+  .consumption {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #consumption_text1 {
+    border: solid #C0C0C0;
+    text-align: center;
+    width: 160px;
+  }
+  #consumption_text2,#consumption_text3 {
+    margin-left: 24%;
+    border: solid #C0C0C0;
+    text-align: center;
+    width: 160px;
+  }
+
+  /* 契約容量 */
+  .capacity {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #capacity_list1 {
+    margin-right: 5px;
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+  }
+  #capacity_list2,#capacity_list3 {
+    width: 86px;
+    margin-left:30%;
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+  }
+
+  /* 電力会社名 */
+  .company {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #company_list1 {
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+    font-size: 0.9rem;
+    width: 298px;
+  }
+  #company_list2,#company_list3 {
+    margin-left:12%;
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+    font-size: 0.9rem;
+    width: 300px;
+  }
+
+  /* サービス名 */
+  .service {
+    display: flex;
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #service_list1 {
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+    font-size: 0.9rem;
+    width: 298px;
+  }
+  #service_list2,#service_list3 {
+    margin-left:12%;
+    border: solid #C0C0C0;
+    padding: 0 20px 0 20px;
+    font-size: 0.9rem;
+    width: 300px;
+  }
+
+  /* 電気料金 */
+  .price {
+    font-size: 1.3rem;
+    margin-top: 10px;
+  }
+  #price_item {
+    display: flex;
+  }
+  #price_item p {
+    background: #f3f3f3;
+    text-align: center;
+    border: solid #f3f3f3;
+    padding: 0 20px 0 20px;
+    width: 300px;
+  }
+  .price_item {
+    display: flex;
+  }
+  #item_Basic2,#item_first2,#item_second2,#item_third2  {
+    margin-left: 135px;
+  }
+  #price_total {
+    display: flex;
+  }
+  #price_total h2 {
+    padding-top: 10px;
+  }
+  #price_total p {
+    text-align: center;
+    padding: 5px 0;
+    width: 300px;
+    font-size: 1.5rem;
+  }
+  #total_item1 {
+    background: #e6b8af;
+  }
+  #total_item2,#total_item3 {
+    background: #9fc5e8;
+    margin-left: 135px;
+  }
+
+
+  /* ボタン */
+  #execution,#clear {
+    border: solid 1px;
+    width: 100px;
+    height: 35px;
+    text-align: center;
+    background: #f3f3f3;
+    font-size: 1.3rem;
+    margin: 15px 0 0 370px;
+    box-shadow: 0px 6px #bfbfbf;
+  }
+  #execution:active,#clear:active {
+    box-shadow: none;
+    position: relative;
+    top: 10px;
+  }
+
+  #clear {
+    margin-left: 340px;
+  }
+  /* フッター */
+  .footer {
+    display: flex;
+    font-size: 1.3rem;
+    margin: 20px 0 0px 24%;
+  }
+  .footer_text1 {
+    background: #f3f3f3;
+    width: 300px;
+    text-align: center;
+    padding: 5px 0px;
+  }
+  .footer_text2 {
+    text-align: center;
+    margin-left: 135px;
+    background: #f3f3f3;
+    width: 300px;
+    padding: 5px 0;
+  }
+  .footer_text2::after {
+    content: "※１ヶ月あたりの12倍";
+    font-size: 0.8rem;
+  }
+
+  /* 差額 */
+  .footer_difference {
+    display: flex;
+    font-size: 1.3rem;
+    padding: 10px 0;
+  }
+  .footer_border {
+    border-bottom: solid;
+    display: flex;
+  }
+  #border_text1 {
+    width: 300px;
+    color: red;
+    text-align: center;
+  }
+  #border_text2 {
+    width: 300px;
+    color: red;
+    text-align: center;
+    margin-left: 135px;
+  }
+  #border_text3 {
+    display: none;
+  }
+  .main_second {
+    display: none;
+  }
+
+/* お客様番号 */
+  .footer_number {
+    margin: 20px 0;
+    font-size: 1.3rem;
+    display: flex;
+  }
+  #number_text {
+    color: red;
+    width: 700px;
+  }
+
+
+
+  /* スマホCSS */
+  @media screen and (max-width: 1024px) {
+    body {
+      margin: 0 auto;
+      width: 100%;
+    }
+
+
+    h2 {
+      width: 300px;
+      font-size: 1.1rem;
+      text-align: initial;
+      margin-left: 10px;
+    }
+
+    /* ヘッダー */
+    .area {
+      margin-top: 5px;
+     }
+    #area_list3 {
+      padding-top: 7px;
+     }
+    .header_title {
+      display:block;
+      font-size: 2rem;
+      background: #e6b8af;
+      color: white;
+      text-align: center;
+    }
+
+.main_second {
+    display: block;
+  }
+
+    .denki_list,#area_list2,#company_list2,#service_list2,#capacity_list2,#item_Basic2,#item_first2,#consumption_text2,#item_second2,#item_third2,#total_item2
+     {
+      display:none;
+     }
+    .area, .capacity, .service, .capacity,#price_item, .price_item,.company
+     {
+      display:block;
+     }
+     .consumption,#price_total {
+       display: block;
+     }
+
+     #service_list1,#item_first1,#item_second1,#item_third1,#total_item1,#service_list3,#item_first3,#item_second3,#item_third3,#total_item3,price_total {
+      font-size: 1.1rem;
+      padding-left: 5px;
+      width: 270px;
+      height: 25px;
+      margin-left: 15%;
+     }
+
+     #area_list1,#company_list1, #area_list3,#company_list3 {
+      font-size: 1.1rem;
+      padding-left: 5px;
+      width: 335px;
+      height: 40px;
+      margin-left: 6%;
+      transform: scale(calc(8 / 10));
+     }
+
+     #price_item p {
+      font-size: 1.1rem;
+      padding-left: 5px;
+      width: 270px;
+      height: 25px;
+      margin-left: 15%;
+     }
+     #price_total p {
+      font-size: 1.1rem;
+      padding-left: 5px;
+      width: 270px;
+      height: 25px;
+      margin-left: 15%;
+     }
+
+     #total_item1,#total_item3 {
+       text-align: center;
+       padding-top: 10px;
+     }
+
+     #capacity_list1,#consumption_text1,#capacity_list3,#consumption_text3 {
+      width: 75px;
+      height: 25px;
+      margin-left: 15%;
+      font-size: 0.9rem;
+     }
+
+    /* 契約容量 */
+
+    .switching_title {
+      display:block;
+      font-size: 2rem;
+      background: #9fc5e8;
+      margin-top: 50px;
+      color: white;
+      text-align: center;
+    }
+
+    /* ボタン */
+    #execution,#clear {
+      width: 47px;
+      height: 15px;
+      font-size: 0.8rem;
+      margin: 15px 0 0 90px;
+      box-shadow: 0px 4px #bfbfbf;
+    }
+    #clear {
+      margin-left: 95px;
+    }
+  .footer {
+    font-size: 0.7rem;
+    margin-left: 15%;
+  }
+  .footer_text1 {
+    height: 25px;
+    width: 120px;
+  }
+  .footer_text2 {
+    width: 120px;
+    margin-left: 30px;
+  }
+  .footer_text2::after {
+    content: "";
+  }
+  .footer_difference h2 {
+    text-align: inherit;
+    width: 45px;
+  }
+  .footer_border {
+    font-size: 1.1rem;
+  }
+  #border_text1 {
+    width: 135px;
+  }
+  #border_text2 {
+    display: none;
+  }
+  #border_text3 {
+    display: block;
+    width: 135px;
+    color: red;
+    text-align: center;
+  }
+}
